@@ -1,0 +1,210 @@
+/* Invoice Modal Styles */
+.invoice-modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .invoice-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .invoice-modal-header h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .invoice-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .invoice-actions .btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+  
+  .invoice-actions .btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .invoice-actions .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .invoice-actions .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .invoice-actions .btn-secondary:hover {
+    background-color: #545b62;
+  }
+  
+  /* Invoice Preview Styles */
+  .invoice-preview {
+    background: white;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .invoice-header {
+    border-bottom: 3px solid #ff8c00;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .company-name {
+    color: #ff8c00;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .invoice-details {
+    background-color: #f5f5f5;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 4px;
+  }
+  
+  .bill-ship-section {
+    display: flex;
+    gap: 40px;
+    margin: 25px 0;
+  }
+  
+  .bill-to, .ship-to {
+    flex: 1;
+  }
+  
+  .bill-to h4, .ship-to h4 {
+    margin: 0 0 12px 0;
+    padding: 8px 0;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 14px;
+  }
+  
+  .items-table th {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .items-table td {
+    border: 1px solid #ddd;
+    padding: 12px 8px;
+    vertical-align: top;
+  }
+  
+  .items-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .bank-details {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    margin-right: 25px;
+    flex: 1;
+  }
+  
+  .bank-details h4 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .totals-section {
+    margin-top: 25px;
+  }
+  
+  .signature-section {
+    text-align: right;
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .invoice-modal-header {
+      flex-direction: column;
+      gap: 15px;
+      align-items: stretch;
+    }
+    
+    .invoice-actions {
+      justify-content: center;
+    }
+    
+    .bill-ship-section {
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .invoice-preview {
+      padding: 20px 15px;
+    }
+    
+    .items-table {
+      font-size: 12px;
+    }
+    
+    .items-table th,
+    .items-table td {
+      padding: 8px 6px;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .invoice-modal-header {
+      display: none;
+    }
+    
+    .invoice-preview {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .invoice-modal-content {
+      max-height: none;
+      overflow: visible;
+    }
+  }
+  
+  /* Modal size adjustment */
+  .modal.large .modal-content {
+    max-width: 1000px;
+    width: 95%;
+  }
